@@ -1,11 +1,22 @@
 
+This is the Collaborative Filtering Version 3
+implements the timeSVD++ algorithm in "Advances in Collaborative Filtering" Yehuda Koren and Robert Bell
 
-\begin{align}
-\hat{r}_{ui} = \mu + b_i(t_{ui}) + b_u(t_{ui}) + q_i^T\left(p_u(t_{ui}) + |R(u)|^{-\frac{1}{2}}\sum_{j \in R(u)}y_j\right) \\
-p_{uk}(t) = p_{uk} + \alpha_{uk}{\cdot}dev_u(t) + p_{uk,t}  \\
-b_i(t_{ui}) = b_i + b_{i,Bin(t)}\\
-b_u(t_{ui}) = b_u + \alpha_{u}{\cdot}dev_u(t) + b_{u,t}
-\end{align}
+In this version:
+
+Added: 
+1. implicit feedback
+2. changing scale of user ratings
+3. sudden drifts emerging as “spikes” associated with a single day
+4. temporal dynamics affected user preferences and thereby the interaction between users and items (user factor as a function of time)
+
+All of the variations was implemented in the file TrainingSparseUIVectorT_Implicit.py
+
+I didn't implement the spline_based model for the gradual concept drift. The amazon dataset is too sparse, it makes no sense to use the spline_based model.
+
+Anyway, it is the last version for the Amazon Recommender System using Matrix Factorization Model. We can still all the neighborhood_based model to improve the performance. But it just needs a little extra programming skill which provides little challenge.
+
+
 
 
 
