@@ -14,7 +14,9 @@ All of the variations was implemented in the file TrainingSparseUIVectorT_Implic
 
 I didn't implement the spline_based model for the gradual concept drift. The amazon dataset is too sparse, it makes no sense to use the spline_based model.
 
-Anyway, it is the last version for the Amazon Recommender System using Matrix Factorization Model. I can still add the neighborhood_based model to improve the performance. But it just needs a little extra time and programming. Instead, I will move on to Berkeley course: CS294 Deep Reinforcement Learning.
+Anyway, it is the last version for the Amazon Recommender System using Matrix Factorization Model. I can still add the neighborhood_based model to improve the performance. But it just needs a little extra time and programming. 
+
+Instead, I will move on to Berkeley course: CS294 Deep Reinforcement Learning.
 
 
 
